@@ -5,46 +5,36 @@
   원격 빌드를 시작하는 중
   소스를 컴파일하는 중:
   Battle_Client_UI.c
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(72,13): warning : unused variable ‘p2_start_is_dead’ [-Wunused-variable]
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(72,13): warning :    72 |         int p2_start_is_dead = 0;
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(72,13): warning :       |             ^~~~~~~~~~~~~~~~
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(67,13): warning : unused variable ‘start_is_dead’ [-Wunused-variable]
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(67,13): warning :    67 |         int start_is_dead = 0;
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(67,13): warning :       |             ^~~~~~~~~~~~~
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(32,17): warning : unused variable ‘byte_read’ [-Wunused-variable]
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(32,17): warning :    32 |         ssize_t byte_read;
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(32,17): warning :       |                 ^~~~~~~~~
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(31,14): warning : unused variable ‘message’ [-Wunused-variable]
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(31,14): warning :    31 |         char message[MAXLINE];
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(31,14): warning :       |              ^~~~~~~
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(28,13): warning : unused variable ‘answer’ [-Wunused-variable]
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(28,13): warning :    28 |         int answer = 0;
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(28,13): warning :       |             ^~~~~~
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(22,28): warning : unused variable ‘fd4’ [-Wunused-variable]
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(22,28): warning :    22 |         int fd1, fd2, fd3, fd4;
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(22,28): warning :       |                            ^~~
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(22,23): warning : unused variable ‘fd3’ [-Wunused-variable]
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(22,23): warning :    22 |         int fd1, fd2, fd3, fd4;
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(22,23): warning :       |                       ^~~
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(22,18): warning : unused variable ‘fd2’ [-Wunused-variable]
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(22,18): warning :    22 |         int fd1, fd2, fd3, fd4;
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(22,18): warning :       |                  ^~~
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(22,13): warning : unused variable ‘fd1’ [-Wunused-variable]
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(22,13): warning :    22 |         int fd1, fd2, fd3, fd4;
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(22,13): warning :       |             ^~~
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(251,14): warning : unused variable ‘buffer’ [-Wunused-variable]
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(251,14): warning :   251 |         char buffer[MAXLINE];
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(251,14): warning :       |              ^~~~~~
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(293,14): warning : unused variable ‘buffer’ [-Wunused-variable]
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(293,14): warning :   293 |         char buffer[MAXLINE];
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(293,14): warning :       |              ^~~~~~
+C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(78,13): warning : unused variable ‘p2_start_is_dead’ [-Wunused-variable]
+C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(78,13): warning :    78 |         int p2_start_is_dead = 0;
+C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(78,13): warning :       |             ^~~~~~~~~~~~~~~~
+C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(73,13): warning : unused variable ‘start_is_dead’ [-Wunused-variable]
+C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(73,13): warning :    73 |         int start_is_dead = 0;
+C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(73,13): warning :       |             ^~~~~~~~~~~~~
+C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(38,21): warning : variable ‘child’ set but not used [-Wunused-but-set-variable]
+C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(38,21): warning :    38 |         int status, child;
+C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(38,21): warning :       |                     ^~~~~
+C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(36,17): warning : unused variable ‘byte_read’ [-Wunused-variable]
+C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(36,17): warning :    36 |         ssize_t byte_read;
+C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(36,17): warning :       |                 ^~~~~~~~~
+C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(35,14): warning : unused variable ‘message’ [-Wunused-variable]
+C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(35,14): warning :    35 |         char message[MAXLINE];
+C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(35,14): warning :       |              ^~~~~~~
+C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(31,13): warning : unused variable ‘answer’ [-Wunused-variable]
+C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(31,13): warning :    31 |         int answer = 0;
+C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(31,13): warning :       |             ^~~~~~
+C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(277,14): warning : unused variable ‘buffer’ [-Wunused-variable]
+C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(277,14): warning :   277 |         char buffer[MAXLINE];
+C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(277,14): warning :       |              ^~~~~~
   개체를 연결하는 중
 /usr/bin/ld : error : /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/Battle_Client_UI.o: in function `main':
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(21): error : multiple definition of `main'; /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/BattleManager.o:/home/KimJaeHoon/projects/Pokemon_Test/BattleManager.c:16: first defined here
+C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(19): error : multiple definition of `main'; /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/BattleManager.o:/home/KimJaeHoon/projects/Pokemon_Test/BattleManager.c:16: first defined here
 /usr/bin/ld : error : /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/main.o: in function `main':
 C:\Users\cijan\source\repos\Test\Pokemon_Test\main.c(15): error : multiple definition of `main'; /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/BattleManager.o:/home/KimJaeHoon/projects/Pokemon_Test/BattleManager.c:16: first defined here
 /usr/bin/ld : error : /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/makeShm.o: in function `main':
 C:\Users\cijan\source\repos\Test\Pokemon_Test\makeShm.c(12): error : multiple definition of `main'; /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/BattleManager.o:/home/KimJaeHoon/projects/Pokemon_Test/BattleManager.c:16: first defined here
+/usr/bin/ld : error : /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/makeShm2.o: in function `main':
+C:\Users\cijan\source\repos\Test\Pokemon_Test\makeShm2.c(12): error : multiple definition of `main'; /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/BattleManager.o:/home/KimJaeHoon/projects/Pokemon_Test/BattleManager.c:16: first defined here
 /usr/bin/ld : error : /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/PrintShm.o: in function `main':
 C:\Users\cijan\source\repos\Test\Pokemon_Test\PrintShm.c(15): error : multiple definition of `main'; /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/BattleManager.o:/home/KimJaeHoon/projects/Pokemon_Test/BattleManager.c:16: first defined here
 /usr/bin/ld : error : /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/shellPipe.o: in function `main':
