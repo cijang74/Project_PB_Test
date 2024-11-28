@@ -1,0 +1,1 @@
+cd /home/KimJaeHoon/projects/Pokemon_Test/; g++ -o "/home/KimJaeHoon/projects/Pokemon_Test/bin/x64/Release/Pokemon_Test.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/main.o

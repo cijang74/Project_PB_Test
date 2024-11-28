@@ -1,0 +1,1 @@
+cd /home/KimJaeHoon/projects/Fork_Test/; g++ -o "/home/KimJaeHoon/projects/Fork_Test/bin/x64/Release/Fork_Test.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack /home/KimJaeHoon/projects/Fork_Test/obj/x64/Release/main.o
