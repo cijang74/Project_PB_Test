@@ -11,29 +11,20 @@
 
 #define MAXLINE 100
 
+void Devide_Team(int who_am_i);
+
 void player_turn_attack(int who_am_i, int* shmp, int* shmp2); // 플레이어 공격 함수
 
 void waiting_opponent(int who_am_i, int* shmp, int* shmp2); // 상대 플레이어 대기 함수
 
+void Reset_Shm(int* shmp, int* shmp2);
+
+void Print_Battle_Begine(int* shmp, int* shmp2);
+
 int main(int argc, char* argv[])
 {
-	//int fd1, fd2, fd3, fd4;
-
-	//char fd1_str[MAXLINE];
-	//char fd2_str[MAXLINE];
-	//char fd3_str[MAXLINE];
-	//char fd4_str[MAXLINE];
-
-	int shmid, shmid2;
-	key_t key, key2;
-	int* shmp; // p1 공유 메모리 저장 공간
-	int* shmp2; // p2 공유 메모리 저장 공간
 	int answer = 0;
-	int is_battleEnd = 0;
 	int who_am_i = 0;
-	int pipe_who_am_i = 0;
-	char message[MAXLINE];
-	ssize_t byte_read;
 
 	int status, child;
 
@@ -46,134 +37,9 @@ int main(int argc, char* argv[])
 	}
 
 	who_am_i = atoi(argv[1]);
-
-	// 키값(키 정보) 설정
-	key = ftok("Player_file", 75);
-	key2 = ftok("Player2_file", 76);
-
-	// 공유메모리 접근
-	shmid = shmget(key, 10 * sizeof(int), 0); // 플레이어 1
-	shmid2 = shmget(key2, 10 * sizeof(int), 0); // 플레이어 2
-
-	// 예외처리
-	if (shmid == -1)
-	{
-		perror("shmget");
-		exit(1);
-	}
-
-	// 공유메모리를 해당 프로세스에 부착
-	shmp = (int*)shmat(shmid, NULL, 0); // 플레이어 초기 값: shmp[0]: hp=10, shmp[1]: speed=5, shmp[2]: attack=3, shmp[3]: is_dead=0
-	shmp2 = (int*)shmat(shmid2, NULL, 0); // 상대 포켓몬 값: shmp[0]: hp=10, shmp[1]: speed=5, shmp[2]: attack=3, shmp[3]: is_dead=0
-
-	// 어떻게 초기화 시킬건지 선정
-	int start_hp = 10;
-	int start_speed = 5;
-	int start_attack = 3;
-	int start_is_dead = 0;
-
-	int p2_start_hp = 6;
-	int p2_start_speed = 1;
-	int p2_start_attack = 3;
-	int p2_start_is_dead = 0;
-
-	// 공유 메모리 초기화
-	shmp[0] = start_hp;
-	shmp[1] = start_speed;
-	shmp[2] = start_attack;
-
-	shmp2[0] = p2_start_hp;
-	shmp2[1] = p2_start_speed;
-	shmp2[2] = p2_start_attack;
-
-	// 내 턴인지 판단하는 변수
-	shmp[4] = 0;
-	shmp2[4] = 0;
-
-	// 현재 배틀이 끝났는지 판단하는 변수
-	shmp[5] = is_battleEnd;
-	shmp2[5] = is_battleEnd;
-
-	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
-	printf("\n[Battle Manager]: || 포켓몬 배틀 시작! ||\n");
+	Devide_Team(who_am_i);
 
-	// 각 포켓몬 스피드값 비교하여 선제턴 주기
-	if (shmp[1] >= shmp2[1]) // 내 포켓몬이 상대 포켓몬보다 빠르면
-	{
-		shmp[4] = 1;
-	}
-
-	if (shmp2[1] > shmp[1])
-	{
-		shmp2[4] = 1;
-	}
-
-	printf("\nDebug: pipe_who_am_i: %d\n", pipe_who_am_i, shmp[0]);
-
-	printf("P1 shm 정보: [0]| hp: %d, [1]| speed: %d, [2]| attack: %d, [3]| is_dead: %d, [4]| is_my_turn: %d, [5]| is_battle_End: %d\n",
-		shmp[0], shmp[1], shmp[2], shmp[3], shmp[4], shmp[5]);
-
-	printf("P2 shm 정보: [0]| hp: %d, [1]| speed: %d, [2]| attack: %d, [3]| is_dead: %d, [4]| is_my_turn: %d, [5]| is_battle_End: %d\n\n",
-		shmp2[0], shmp2[1], shmp2[2], shmp2[3], shmp2[4], shmp2[5]);
-
-	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-	//플레이어 1의 콘솔 내용
-	if (who_am_i == 1)
-	{
-		//fd1 = atoi(argv[2]);
-
-		//// 파이프에서 pipe_who_am_i (나중에는 구조체) 읽어오기
-		//if (read(fd1, &pipe_who_am_i, sizeof(pipe_who_am_i) < 0))
-		//{
-		//	perror("read");
-		//	close(fd1);
-		//	exit(4);
-		//}
-		//close(fd1);
-
-		// 만약 플레이어 1의 턴이면 공격 기회 얻기
-		if (shmp[4] == 1)
-		{
-			player_turn_attack(who_am_i, shmp, shmp2);
-		}
-
-		//만약 플레이어 1의 턴이 아니면 기다리기
-		else if (shmp[4] == 0)
-		{
-			waiting_opponent(who_am_i, shmp, shmp2);
-		}
-	}
-
-	// 플레이어 2의 콘솔 내용
-	if (who_am_i == 2)
-	{
-		//fd3 = atoi(argv[2]);
-
-		//// 파이프에서 pipe_who_am_i (나중에는 구조체) 읽어오기
-		//if (read(fd3, &pipe_who_am_i, sizeof(pipe_who_am_i) < 0))
-		//{
-		//	perror("read");
-		//	close(fd3);
-		//	exit(4);
-		//}
-		//close(fd3);
-
-		// 만약 플레이어 2의 턴이면 공격 기회 얻기
-		if (shmp2[4] == 1)
-		{
-			player_turn_attack(who_am_i, shmp2, shmp);
-		}
-
-		//만약 플레이어 2의 턴이 아니면 기다리기
-		else if (shmp2[4] == 0)
-		{
-			waiting_opponent(who_am_i, shmp2, shmp);
-		}
-	}
-
-	printf("\n결과: shm[5]: %d, shm2[5]: %d\n", shmp[5], shmp2[5]);
 	exit(0); // 다시 BattleManager로 돌아가기
 
 	child = wait(&status);
@@ -226,15 +92,16 @@ void player_turn_attack(int who_am_i, int* shmp, int*shmp2)
 	{
 		shmp2[3] = 1; // isdead = 1;
 		shmp[5] = 1; // is_battle_End = 1;
+		shmp[7] = 1; // is_battle_End = 1;
 
 		shmp[4] = 0;
 		shmp2[4] = 1;
 
-		printf("[Battle Manager]: 당신은 승리하였습니다. 프로그램을 강제 종료합니까?\n");
+		printf("[Battle Manager]: 당신은 승리하였습니다. 메인 화면으로 돌아갑니까?\n");
 		printf("[Battle Manager]: 예: 1, 아니요: 0\n");
 
 		scanf("%d", &answer);
-		printf("[Battle Manager]: 프로그램이 종료되었습니다.\n");
+		printf("[Battle Manager]: 메인 화면으로 돌아갑니다..\n");
 
 		return;
 	}
@@ -271,12 +138,7 @@ void waiting_opponent(int who_am_i, int* shmp, int* shmp2)
 		{
 			shmp[3] = 1; // isdead = 1;
 			shmp2[5] = 1; // is_battle_End = 1;
-
-			printf("[Battle Manager]: 당신은 패배하였습니다. 프로그램을 강제 종료합니까?\n");
-			printf("[Battle Manager]: 예: 1, 아니요: 0\n");
-
-			scanf("%d", &answer);
-			printf("[Battle Manager]: 프로그램이 종료되었습니다.\n");
+			shmp2[7] = 1; // is_battle_End = 1;
 
 			return;
 		}
@@ -286,4 +148,203 @@ void waiting_opponent(int who_am_i, int* shmp, int* shmp2)
 
 		player_turn_attack(who_am_i, shmp, shmp2);
 	}
+}
+
+void Devide_Team(int who_am_i)
+// pid를 입력받고 조를 나눠 싸우게 만들어줄 수 있도록 하게 해주는 함수
+{
+	int shmid, shmid2, shmid3, shmid4, checkid;
+	key_t key, key2, key3, key4;
+
+	int* shmp; // p1 공유 메모리 저장 공간
+	int* shmp2; // p2 공유 메모리 저장 공간
+	int* checkp; // 체크용 공유 메모리 저장 공간
+
+	// 흐름 판단에서 사용될 변수
+	int winner_count = 0;
+
+	// 키값(키 정보) 설정
+	key = ftok("Player_file", 75);
+	key2 = ftok("Player2_file", 76);
+	key3 = ftok("Player3_file", 77);
+	key4 = ftok("Player4_file", 78);
+
+	// 공유메모리 접근
+	shmid = shmget(key, 10 * sizeof(int), 0); // 플레이어 1
+	shmid2 = shmget(key2, 10 * sizeof(int), 0); // 플레이어 2
+	shmid3 = shmget(key3, 10 * sizeof(int), 0); // 플레이어 3
+	shmid4 = shmget(key4, 10 * sizeof(int), 0); // 플레이어 4
+
+	// 예외처리
+	if (shmid == -1 || shmid2 == -1)
+	{
+		perror("shmget1");
+		exit(1);
+	}
+
+	if (shmid2 == -1 || shmid3 == -1)
+	{
+		perror("shmget2");
+		exit(1);
+	}
+
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// 나중에 이름 바꾸기: shmp -> player, shmp2 -> opponent
+	if (who_am_i == 1)
+	{
+		// 공유메모리를 해당 프로세스에 부착
+		shmp = (int*)shmat(shmid, NULL, 0); // 플레이어 초기 값: shmp[0]: hp=10, shmp[1]: speed=5, shmp[2]: attack=3, shmp[3]: is_dead=0
+	}
+
+	if (who_am_i == 2)
+	{
+		// 공유메모리를 해당 프로세스에 부착
+		shmp = (int*)shmat(shmid2, NULL, 0); // 플레이어 초기 값: shmp[0]: hp=10, shmp[1]: speed=5, shmp[2]: attack=3, shmp[3]: is_dead=0
+	}
+
+	if (who_am_i == 3)
+	{
+		// 공유메모리를 해당 프로세스에 부착
+		shmp = (int*)shmat(shmid3, NULL, 0); // 플레이어 초기 값: shmp[0]: hp=10, shmp[1]: speed=5, shmp[2]: attack=3, shmp[3]: is_dead=0
+	}
+
+	if (who_am_i == 4)
+	{
+		// 공유메모리를 해당 프로세스에 부착
+		shmp = (int*)shmat(shmid4, NULL, 0); // 플레이어 초기 값: shmp[0]: hp=10, shmp[1]: speed=5, shmp[2]: attack=3, shmp[3]: is_dead=0
+	}
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	// 2명 생존했을 때 상대를 정하는 블럭////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	checkid = shmget(key, 10 * sizeof(int), 0); // 플레이어 1 체크
+	checkp = (int*)shmat(checkid, NULL, 0); // 플레이어 초기 값: shmp[0]: hp=10, shmp[1]: speed=5, shmp[2]: attack=3, shmp[3]: is_dead=0
+	if (checkp[7] == 1) // is_win
+	{
+		winner_count++;
+		if (winner_count == 2)
+		{
+			shmp2 = (int*)shmat(checkid, NULL, 0); // 플레이어 초기 값: shmp[0]: hp=10, shmp[1]: speed=5, shmp[2]: attack=3, shmp[3]: is_dead=0
+		}
+	}
+
+	checkid = shmget(key2, 10 * sizeof(int), 0); // 플레이어 2 체크
+	checkp = (int*)shmat(checkid, NULL, 0); // 플레이어 초기 값: shmp[0]: hp=10, shmp[1]: speed=5, shmp[2]: attack=3, shmp[3]: is_dead=0
+	if (checkp[7] == 1) // is_win
+	{
+		winner_count++;
+		if (winner_count == 2)
+		{
+			shmp2 = (int*)shmat(checkid, NULL, 0); // 플레이어 초기 값: shmp[0]: hp=10, shmp[1]: speed=5, shmp[2]: attack=3, shmp[3]: is_dead=0
+		}
+	}
+
+	checkid = shmget(key3, 10 * sizeof(int), 0); // 플레이어 3 체크
+	checkp = (int*)shmat(checkid, NULL, 0); // 플레이어 초기 값: shmp[0]: hp=10, shmp[1]: speed=5, shmp[2]: attack=3, shmp[3]: is_dead=0
+	if (checkp[7] == 1) // is_win
+	{
+		winner_count++;
+		if (winner_count == 2)
+		{
+			shmp2 = (int*)shmat(checkid, NULL, 0); // 플레이어 초기 값: shmp[0]: hp=10, shmp[1]: speed=5, shmp[2]: attack=3, shmp[3]: is_dead=0
+		}
+	}
+
+	checkid = shmget(key4, 10 * sizeof(int), 0); // 플레이어 4 체크
+	checkp = (int*)shmat(checkid, NULL, 0); // 플레이어 초기 값: shmp[0]: hp=10, shmp[1]: speed=5, shmp[2]: attack=3, shmp[3]: is_dead=0
+	if (checkp[7] == 1) // is_win
+	{
+		winner_count++;
+		if (winner_count == 2)
+		{
+			shmp2 = (int*)shmat(checkid, NULL, 0); // 플레이어 초기 값: shmp[0]: hp=10, shmp[1]: speed=5, shmp[2]: attack=3, shmp[3]: is_dead=0
+		}
+	}
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	// 4명 생존했을 때 상대를 정하는 블럭////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	if (winner_count < 2) // 4명 생존
+	{
+		if (who_am_i == 1)
+		{
+			// p1 vs p2
+			shmp2 = (int*)shmat(shmid2, NULL, 0); // 플레이어 초기 값: shmp[0]: hp=10, shmp[1]: speed=5, shmp[2]: attack=3, shmp[3]: is_dead=0
+		}
+
+		if (who_am_i == 2)
+		{
+			// p2 vs p1
+			shmp2 = (int*)shmat(shmid, NULL, 0); // 플레이어 초기 값: shmp[0]: hp=10, shmp[1]: speed=5, shmp[2]: attack=3, shmp[3]: is_dead=0
+		}
+
+		if (who_am_i == 3)
+		{
+			// p3 vs p4
+			shmp2 = (int*)shmat(shmid4, NULL, 0); // 플레이어 초기 값: shmp[0]: hp=10, shmp[1]: speed=5, shmp[2]: attack=3, shmp[3]: is_dead=0
+		}
+
+		if (who_am_i == 4)
+		{
+			// p4 vs p3
+			shmp2 = (int*)shmat(shmid3, NULL, 0); // 플레이어 초기 값: shmp[0]: hp=10, shmp[1]: speed=5, shmp[2]: attack=3, shmp[3]: is_dead=0
+		}
+	}
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	Reset_Shm(shmp, shmp2);
+	Print_Battle_Begine(shmp, shmp2);
+
+	// 각 포켓몬 스피드값 비교하여 선제턴 주기
+	if (shmp[1] >= shmp2[1]) // 내 포켓몬이 상대 포켓몬보다 빠르면
+	{
+		shmp[4] = 1;
+	}
+
+	if (shmp2[1] > shmp[1])
+	{
+		shmp2[4] = 1;
+	}
+
+	// 만약 플레이어의 턴이면 공격 기회 얻기
+	if (shmp[4] == 1)
+	{
+		printf("\nDebug| p1 Speed: %d, p2 Speed: %d", shmp[1], shmp2[1]);
+		player_turn_attack(who_am_i, shmp, shmp2);
+	}
+
+	//만약 플레이어의 턴이 아니면 기다리기
+	else if (shmp[4] == 0)
+	{
+		waiting_opponent(who_am_i, shmp, shmp2);
+	}
+
+	printf("\n결과: shm[5]: %d, shm2[5]: %d\n", shmp[7], shmp2[7]);
+	return;
+}
+
+void Reset_Shm(int* shmp, int* shmp2)
+{
+	int pid1;
+	int child, status;
+	pid1 = fork(); // 자식 프로세스 생성
+	if (pid1 == 0)
+	{
+		// 상대경로 fork파일을 실행
+		execl("./UpdateShm", "./UpdateShm", NULL);
+		exit(1);
+	}
+	child = wait(&status);
+	return;
+}
+
+void Print_Battle_Begine(int* shmp, int* shmp2)
+{
+	printf("\n[Battle Manager]: || 포켓몬 배틀 시작! ||\n");
+
+	printf("P1 shm 정보: [0]| hp: %d, [1]| speed: %d, [2]| attack: %d, [3]| is_dead: %d, [4]| is_my_turn: %d, [5]| is_battle_End: %d, [6]| ID: %d, [7]| win: %d\n",
+		shmp[0], shmp[1], shmp[2], shmp[3], shmp[4], shmp[5], shmp[6], shmp[7]);
+
+	printf("P2 shm 정보: [0]| hp: %d, [1]| speed: %d, [2]| attack: %d, [3]| is_dead: %d, [4]| is_my_turn: %d, [5]| is_battle_End: %d, [6]| ID: %d, [7]| win: %d\n\n",
+		shmp2[0], shmp2[1], shmp2[2], shmp2[3], shmp2[4], shmp2[5], shmp2[6], shmp2[7]);
+
+	return;
 }

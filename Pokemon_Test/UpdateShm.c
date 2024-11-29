@@ -47,11 +47,56 @@ int main()
 	shmp3 = (int*)shmat(shmid3, NULL, 0); // 플레이어 초기 값: shmp[0]: hp=10, shmp[1]: speed=5, shmp[2]: attack=3, shmp[3]: is_dead=0
 	shmp4 = (int*)shmat(shmid4, NULL, 0); // 상대 포켓몬 값: shmp[0]: hp=10, shmp[1]: speed=5, shmp[2]: attack=3, shmp[3]: is_dead=0
 
-	printf("\nshmid: %d\n", shmid);
-	printf("hp: %d\n", shmp[0]);
-	printf("speed: %d\n", shmp[1]);
-	printf("attack: %d\n", shmp[2]);
-	printf("is_dead: %d\n", shmp[3]);
+    // 공유메모리 주소를 통해 공유메모리에 값 넣기
+	shmp[0] = 10; // hp
+	shmp[1] = 5; // speed
+	shmp[2] = 3; // attack
+	shmp[3] = 0; // 죽었는지 판단
+
+	shmp2[0] = 6;
+	shmp2[1] = 1;
+	shmp2[2] = 3;
+	shmp2[3] = 0; // 죽었는지 판단
+
+	shmp3[0] = 6;
+	shmp3[1] = 4;
+	shmp3[2] = 3;
+	shmp3[3] = 0; // 죽었는지 판단
+
+	shmp4[0] = 7;
+	shmp4[1] = 2;
+	shmp4[2] = 3;
+	shmp4[3] = 0; // 죽었는지 판단
+
+	// 내 턴인지 판단하는 변수
+	shmp[4] = 0;
+	shmp2[4] = 0;
+	shmp3[4] = 0;
+	shmp4[4] = 0;
+
+	// 현재 배틀이 끝났는지 판단하는 변수
+	shmp[5] = 0;
+	shmp2[5] = 0;
+	shmp3[5] = 0;
+	shmp4[5] = 0;
+
+	// 플레이어 아이디를 저장하는 변수
+	shmp[6] = 1;
+	shmp2[6] = 2;
+	shmp3[6] = 3;
+	shmp4[6] = 4;
+
+	// 이긴 횟수를 저장하는 변수
+	shmp[7] = 0;
+	shmp2[7] = 0;
+	shmp3[7] = 0;
+	shmp4[7] = 0;
+
+    printf("\nshmid: %d\n", shmid);
+    printf("hp: %d\n", shmp[0]);
+    printf("speed: %d\n", shmp[1]);
+    printf("attack: %d\n", shmp[2]);
+    printf("is_dead: %d\n", shmp[3]);
 	printf("is_myturn: %d\n", shmp[4]);
 	printf("is_battleEnd: %d\n", shmp[5]);
 	printf("playerId: %d\n", shmp[6]);

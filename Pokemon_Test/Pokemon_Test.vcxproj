@@ -80,12 +80,19 @@
     <ClCompile Include="main.c" />
     <ClCompile Include="makeShm.c" />
     <ClCompile Include="makeShm2.c" />
+    <ClCompile Include="makeShm3.c" />
+    <ClCompile Include="makeShm4.c" />
     <ClCompile Include="PrintShm.c" />
     <ClCompile Include="shellPipe.c" />
     <ClCompile Include="test.c" />
+    <ClCompile Include="UpdateShm.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".editorconfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="monster.h" />
+    <ClInclude Include="player.h" />
   </ItemGroup>
   <ItemDefinitionGroup />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
