@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\cijan\\source\\repos\\Test\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F516DA96-E46C-4B9B-8846-F2507450BCB8}|Pokemon_Test\\Pokemon_Test.vcxproj|C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\PrintShm.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F516DA96-E46C-4B9B-8846-F2507450BCB8}|Pokemon_Test\\Pokemon_Test.vcxproj|solutionrelative:Pokemon_Test\\PrintShm.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F516DA96-E46C-4B9B-8846-F2507450BCB8}|Pokemon_Test\\Pokemon_Test.vcxproj|C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\UpdateShm.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F516DA96-E46C-4B9B-8846-F2507450BCB8}|Pokemon_Test\\Pokemon_Test.vcxproj|solutionrelative:Pokemon_Test\\UpdateShm.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F516DA96-E46C-4B9B-8846-F2507450BCB8}|Pokemon_Test\\Pokemon_Test.vcxproj|C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\Battle_Client_UI.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F516DA96-E46C-4B9B-8846-F2507450BCB8}|Pokemon_Test\\Pokemon_Test.vcxproj|solutionrelative:Pokemon_Test\\Battle_Client_UI.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F516DA96-E46C-4B9B-8846-F2507450BCB8}|Pokemon_Test\\Pokemon_Test.vcxproj|C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\BattleManager.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F516DA96-E46C-4B9B-8846-F2507450BCB8}|Pokemon_Test\\Pokemon_Test.vcxproj|solutionrelative:Pokemon_Test\\BattleManager.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F516DA96-E46C-4B9B-8846-F2507450BCB8}|Pokemon_Test\\Pokemon_Test.vcxproj|C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\Battle_Client_UI.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F516DA96-E46C-4B9B-8846-F2507450BCB8}|Pokemon_Test\\Pokemon_Test.vcxproj|solutionrelative:Pokemon_Test\\Battle_Client_UI.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{F516DA96-E46C-4B9B-8846-F2507450BCB8}|Pokemon_Test\\Pokemon_Test.vcxproj|C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\PrintShm.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F516DA96-E46C-4B9B-8846-F2507450BCB8}|Pokemon_Test\\Pokemon_Test.vcxproj|solutionrelative:Pokemon_Test\\PrintShm.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DB747532-8C09-4AA7-BC06-1DA2711E669E}|Test\\Test.vcxproj|C:\\Users\\cijan\\source\\repos\\Test\\Test\\fork_main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -66,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,26 +74,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "UpdateShm.c",
               "DocumentMoniker": "C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\UpdateShm.c",
               "RelativeDocumentMoniker": "Pokemon_Test\\UpdateShm.c",
               "ToolTip": "C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\UpdateShm.c",
               "RelativeToolTip": "Pokemon_Test\\UpdateShm.c",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAswIwAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAEcAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-11-28T19:46:35.545Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Battle_Client_UI.c",
               "DocumentMoniker": "C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\Battle_Client_UI.c",
               "RelativeDocumentMoniker": "Pokemon_Test\\Battle_Client_UI.c",
               "ToolTip": "C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\Battle_Client_UI.c",
               "RelativeToolTip": "Pokemon_Test\\Battle_Client_UI.c",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAAD8BAAANAAAAAAAAAA==",
+              "ViewState": "AgIAABMBAAAAAAAAAAAAADABAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-11-26T18:16:44.338Z",
               "EditorCaption": ""
@@ -106,7 +106,7 @@
               "RelativeDocumentMoniker": "Pokemon_Test\\BattleManager.c",
               "ToolTip": "C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\BattleManager.c",
               "RelativeToolTip": "Pokemon_Test\\BattleManager.c",
-              "ViewState": "AgIAADMAAAAAAAAAAAAuwFEAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAswFEAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-11-26T18:15:53.244Z",
               "EditorCaption": ""
@@ -121,21 +121,19 @@
               "RelativeToolTip": "Pokemon_Test\\makeShm3.c",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-11-28T18:42:51.625Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T18:42:51.625Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "PrintShm.c",
               "DocumentMoniker": "C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\PrintShm.c",
               "RelativeDocumentMoniker": "Pokemon_Test\\PrintShm.c",
               "ToolTip": "C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\PrintShm.c",
               "RelativeToolTip": "Pokemon_Test\\PrintShm.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-11-27T17:23:00.059Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T17:23:00.059Z"
             },
             {
               "$type": "Document",
@@ -159,8 +157,7 @@
               "RelativeToolTip": "Pokemon_Test\\makeShm.c",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-11-26T18:25:21.307Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T18:25:21.307Z"
             },
             {
               "$type": "Document",
@@ -172,8 +169,7 @@
               "RelativeToolTip": "Test\\fork_main.c",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-11-26T17:39:14.759Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T17:39:14.759Z"
             },
             {
               "$type": "Document",
@@ -221,8 +217,7 @@
               "RelativeToolTip": "Pokemon_Test\\makeShm2.c",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-11-28T12:44:44.322Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T12:44:44.322Z"
             },
             {
               "$type": "Document",
@@ -234,8 +229,7 @@
               "RelativeToolTip": "Pokemon_Test\\makeShm4.c",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-11-28T18:43:09.697Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T18:43:09.697Z"
             },
             {
               "$type": "Document",
@@ -247,8 +241,7 @@
               "RelativeToolTip": "Pokemon_Test\\player.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-28T18:26:41.889Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T18:26:41.889Z"
             }
           ]
         }

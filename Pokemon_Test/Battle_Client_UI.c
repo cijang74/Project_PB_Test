@@ -297,10 +297,12 @@ void Devide_Team(int who_am_i)
 	if (shmp[1] >= shmp2[1]) // 내 포켓몬이 상대 포켓몬보다 빠르면
 	{
 		shmp[4] = 1;
+		shmp2[4] = 0;
 	}
 
 	if (shmp2[1] > shmp[1])
 	{
+		shmp[4] = 0;
 		shmp2[4] = 1;
 	}
 
