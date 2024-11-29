@@ -27,7 +27,7 @@ int ask_if_server() {
 
 int main()
 {
-    
+
     int shmid;
     key_t key;
     int pid;
@@ -87,8 +87,8 @@ int main()
         }
         printf("공유 메모리에 연결되었습니다.\n");
     }
-    
-        
+
+
     int playerID = scan_playerID();
 
 
@@ -98,7 +98,7 @@ int main()
                 printf("서버가 실행되지 않았습니다. 서버를 실행합니다.\n");
                 shmaddr->isServerRunning = 1; // 서버 실행 중으로 업데이트
 
-                
+
                 printf("서버가 성공적으로 실행되었습니다.\n");
             }
             shmaddr->flag = 1;                  // 서버에 값 전달 중 표시
@@ -112,7 +112,7 @@ int main()
     printf("서버와 공유 메모리 설정 완료.\n");
 
     char playerIDStr[10];
-	int status;
+    int status;
     // playerID를 문자열로 변환
     sprintf(playerIDStr, "%d", playerID);
 
@@ -120,12 +120,12 @@ int main()
     if (pid == 0)
     {
         printf("자식프로세스에서 main.c 실행");
-		execl("./main", "main", playerIDStr, NULL);
-	}
-	else //pokemonTournament가 종료되면, 자식 프로세스에서 입력 안 됨
-	{
-		int status;
-		wait(&status);
-	}
+        execl("./main", "main", playerIDStr, NULL);
+    }
+    else //pokemonTournament가 종료되면, 자식 프로세스에서 입력 안 됨
+    {
+        int status;
+        wait(&status);
+    }
 
 }

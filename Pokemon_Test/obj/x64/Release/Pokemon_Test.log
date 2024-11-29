@@ -4,54 +4,27 @@
   아키텍처의 유효성을 검사하는 중
   원격 빌드를 시작하는 중
   소스를 컴파일하는 중:
-  Battle_Client_UI.c
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(29,21): warning : variable ‘child’ set but not used [-Wunused-but-set-variable]
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(29,21): warning :    29 |         int status, child;
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(29,21): warning :       |                     ^~~~~
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(26,13): warning : unused variable ‘answer’ [-Wunused-variable]
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(26,13): warning :    26 |         int answer = 0;
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(26,13): warning :       |             ^~~~~~
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(122,14): warning : unused variable ‘buffer’ [-Wunused-variable]
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(122,14): warning :   122 |         char buffer[MAXLINE];
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(122,14): warning :       |              ^~~~~~
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(121,13): warning : unused variable ‘answer’ [-Wunused-variable]
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(121,13): warning :   121 |         int answer = 0;
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(121,13): warning :       |             ^~~~~~
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(329,13): warning : variable ‘child’ set but not used [-Wunused-but-set-variable]
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(329,13): warning :   329 |         int child, status;
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(329,13): warning :       |             ^~~~~
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(149,17): warning : ‘shmp2’ may be used uninitialized in this function [-Wmaybe-uninitialized]
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(149,17): warning :   149 |                 player_turn_attack(who_am_i, shmp, shmp2);
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(149,17): warning :       |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(160,14): message : ‘shmp2’ was declared here
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(160,14): message :   160 |         int* shmp2; // p2 공유 메모리 저장 공간
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(160,14): message :       |              ^~~~~
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(149,17): warning : ‘shmp’ may be used uninitialized in this function [-Wmaybe-uninitialized]
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(149,17): warning :   149 |                 player_turn_attack(who_am_i, shmp, shmp2);
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(149,17): warning :       |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(159,14): message : ‘shmp’ was declared here
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(159,14): message :   159 |         int* shmp; // p1 공유 메모리 저장 공간
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(159,14): message :       |              ^~~~
-  UpdateShm.c
+  PrintShm.c
+C:\Users\cijan\source\repos\Test\Pokemon_Test\PrintShm.c(37,14): warning : assignment to ‘struct player *’ from incompatible pointer type ‘int *’ [-Wincompatible-pointer-types]
+C:\Users\cijan\source\repos\Test\Pokemon_Test\PrintShm.c(37,14): warning :    37 |         shmp = (int*)shmat(shmid, NULL, 0);
+C:\Users\cijan\source\repos\Test\Pokemon_Test\PrintShm.c(37,14): warning :       |              ^
   개체를 연결하는 중
 /usr/bin/ld : error : /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/Battle_Client_UI.o: in function `main':
-C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(25): error : multiple definition of `main'; /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/BattleManager.o:/home/KimJaeHoon/projects/Pokemon_Test/BattleManager.c:18: first defined here
-/usr/bin/ld : error : /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/main.o: in function `main':
-C:\Users\cijan\source\repos\Test\Pokemon_Test\main.c(15): error : multiple definition of `main'; /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/BattleManager.o:/home/KimJaeHoon/projects/Pokemon_Test/BattleManager.c:18: first defined here
+C:\Users\cijan\source\repos\Test\Pokemon_Test\Battle_Client_UI.c(34): error : multiple definition of `main'; /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/BattleManager.o:/home/KimJaeHoon/projects/Pokemon_Test/BattleManager.c:22: first defined here
 /usr/bin/ld : error : /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/makeShm.o: in function `main':
-C:\Users\cijan\source\repos\Test\Pokemon_Test\makeShm.c(12): error : multiple definition of `main'; /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/BattleManager.o:/home/KimJaeHoon/projects/Pokemon_Test/BattleManager.c:18: first defined here
+C:\Users\cijan\source\repos\Test\Pokemon_Test\makeShm.c(12): error : multiple definition of `main'; /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/BattleManager.o:/home/KimJaeHoon/projects/Pokemon_Test/BattleManager.c:22: first defined here
 /usr/bin/ld : error : /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/makeShm2.o: in function `main':
-C:\Users\cijan\source\repos\Test\Pokemon_Test\makeShm2.c(12): error : multiple definition of `main'; /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/BattleManager.o:/home/KimJaeHoon/projects/Pokemon_Test/BattleManager.c:18: first defined here
+C:\Users\cijan\source\repos\Test\Pokemon_Test\makeShm2.c(12): error : multiple definition of `main'; /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/BattleManager.o:/home/KimJaeHoon/projects/Pokemon_Test/BattleManager.c:22: first defined here
 /usr/bin/ld : error : /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/makeShm3.o: in function `main':
-C:\Users\cijan\source\repos\Test\Pokemon_Test\makeShm3.c(12): error : multiple definition of `main'; /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/BattleManager.o:/home/KimJaeHoon/projects/Pokemon_Test/BattleManager.c:18: first defined here
+C:\Users\cijan\source\repos\Test\Pokemon_Test\makeShm3.c(12): error : multiple definition of `main'; /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/BattleManager.o:/home/KimJaeHoon/projects/Pokemon_Test/BattleManager.c:22: first defined here
 /usr/bin/ld : error : /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/makeShm4.o: in function `main':
-C:\Users\cijan\source\repos\Test\Pokemon_Test\makeShm4.c(12): error : multiple definition of `main'; /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/BattleManager.o:/home/KimJaeHoon/projects/Pokemon_Test/BattleManager.c:18: first defined here
+C:\Users\cijan\source\repos\Test\Pokemon_Test\makeShm4.c(12): error : multiple definition of `main'; /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/BattleManager.o:/home/KimJaeHoon/projects/Pokemon_Test/BattleManager.c:22: first defined here
 /usr/bin/ld : error : /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/PrintShm.o: in function `main':
-C:\Users\cijan\source\repos\Test\Pokemon_Test\PrintShm.c(12): error : multiple definition of `main'; /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/BattleManager.o:/home/KimJaeHoon/projects/Pokemon_Test/BattleManager.c:18: first defined here
+C:\Users\cijan\source\repos\Test\Pokemon_Test\PrintShm.c(17): error : multiple definition of `main'; /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/BattleManager.o:/home/KimJaeHoon/projects/Pokemon_Test/BattleManager.c:22: first defined here
 /usr/bin/ld : error : /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/shellPipe.o: in function `main':
-C:\Users\cijan\source\repos\Test\Pokemon_Test\shellPipe.c(15): error : multiple definition of `main'; /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/BattleManager.o:/home/KimJaeHoon/projects/Pokemon_Test/BattleManager.c:18: first defined here
+C:\Users\cijan\source\repos\Test\Pokemon_Test\shellPipe.c(15): error : multiple definition of `main'; /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/BattleManager.o:/home/KimJaeHoon/projects/Pokemon_Test/BattleManager.c:22: first defined here
 /usr/bin/ld : error : /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/test.o: in function `main':
-C:\Users\cijan\source\repos\Test\Pokemon_Test\test.c(15): error : multiple definition of `main'; /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/BattleManager.o:/home/KimJaeHoon/projects/Pokemon_Test/BattleManager.c:18: first defined here
-/usr/bin/ld : error : /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/UpdateShm.o: in function `main':
-C:\Users\cijan\source\repos\Test\Pokemon_Test\UpdateShm.c(12): error : multiple definition of `main'; /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/BattleManager.o:/home/KimJaeHoon/projects/Pokemon_Test/BattleManager.c:18: first defined here
+C:\Users\cijan\source\repos\Test\Pokemon_Test\test.c(15): error : multiple definition of `main'; /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/BattleManager.o:/home/KimJaeHoon/projects/Pokemon_Test/BattleManager.c:22: first defined here
+/usr/bin/ld : error : /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/RestBattleShm.o: in function `main':
+C:\Users\cijan\source\repos\Test\Pokemon_Test\RestBattleShm.c(17): error : multiple definition of `main'; /home/KimJaeHoon/projects/Pokemon_Test/obj/x64/Release/BattleManager.o:/home/KimJaeHoon/projects/Pokemon_Test/BattleManager.c:22: first defined here
 collect2 : error : ld returned 1 exit status

@@ -39,6 +39,11 @@ int main()
 	// 배틀에서 사용되는 변수들 전부 초기화
 	for (int i = 0; i < 4; i++)
 	{
+		shmp[i].is_dead = 0;
+		shmp[i].isMyTurn = 0;
+		shmp[i].is_battle_end = 0;
+		shmp[i].is_wined = 0;
+
 		printf("\nprocessID: %d\n", i + 1);
 		printf("is_dead: %d\n", shmp[i].is_dead);
 		printf("is_myturn: %d\n", shmp[i].isMyTurn);

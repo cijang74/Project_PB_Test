@@ -82,10 +82,11 @@
     <ClCompile Include="makeShm2.c" />
     <ClCompile Include="makeShm3.c" />
     <ClCompile Include="makeShm4.c" />
+    <ClCompile Include="pokemonTournament.c" />
     <ClCompile Include="PrintShm.c" />
     <ClCompile Include="shellPipe.c" />
     <ClCompile Include="test.c" />
-    <ClCompile Include="UpdateShm.c" />
+    <ClCompile Include="RestBattleShm.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".editorconfig" />

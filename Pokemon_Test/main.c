@@ -125,7 +125,7 @@ void callGrowScene(int playerID)
     }
 }
 
-void callBattleScene()
+void checkMyMonsterScene(int playerID)
 {
     int child, status, pid;
     pid = fork();
@@ -134,7 +134,27 @@ void callBattleScene()
         char playerIDStr[10];
         sprintf(playerIDStr, "%d", playerID);
 
-        execl("./battleScene.c", "battleScene", playerIDStr, NULL);
+        execl("./checkMyMonsterScene", "checkMyMonsterScene", playerIDStr, NULL);
+        perror("execl 실패");
+        exit(1);
+    }
+    else //부모 프로세스
+    {
+        child = wait(&status);
+        printf("자식프로세스 %d 종료. 몬스터 확인 완료.\n", child);
+    }
+}
+
+void callBattleScene(int playerID)
+{
+    int child, status, pid;
+    pid = fork();
+    if (pid == 0)
+    {
+        char playerIDStr[10];
+        sprintf(playerIDStr, "%d", playerID);
+
+        execl("./BattleManager", "./BattleManager", playerIDStr, NULL);
         perror("execl 실패");
         exit(1);
     }
@@ -193,6 +213,8 @@ int main(int argc, char* argv[])
 
     //포켓몬 선택이 끝났을 때
     printf("포켓몬 선택이 완료되었습니다./n");
+
+    checkMyMonsterScene(receivedPlayerID);
 
     //성장씬으로
     callGrowScene(receivedPlayerID);
