@@ -10,42 +10,21 @@
 // 구조체 공유메모리 만들기 귀찮아서 땜빵용으로 정수 배열 공유 메모리 만듦
 int main()
 {
-	int shmid, shmid2, shmid3, shmid4;
-	key_t key, key2, key3, key4;
-	int* shmp; // p1 공유 메모리 저장 공간
-	int* shmp2; // p2 공유 메모리 저장 공간
-	int* shmp3; // p3 공유 메모리 저장 공간
-	int* shmp4; // p4 공유 메모리 저장 공간
+	struct player* player;
+	int shmid;
+	key_t key;
 
-	// 키값(키 정보) 설정
-	key = ftok("Player_file", 75);
-	key2 = ftok("Player2_file", 76);
-	key3 = ftok("Player3_file", 77);
-	key4 = ftok("Player4_file", 78);
+	key = ftok("main", 10597); // 키값(키 정보) 설정
 
-	// 공유메모리 접근
-	shmid = shmget(key, 10 * sizeof(int), 0); // 플레이어 1
-	shmid2 = shmget(key2, 10 * sizeof(int), 0); // 플레이어 2
-	shmid3 = shmget(key3, 10 * sizeof(int), 0); // 플레이어 3
-	shmid4 = shmget(key4, 10 * sizeof(int), 0); // 플레이어 4
-
-	if (shmid == -1 || shmid2 == -1)
+	// 플레이어 공유 메모리 접근
+	shmid = shmget(key, sizeof(struct player) * 4, 0); // 플레이어
+	if (shmid == -1) 
 	{
-		perror("shmget1");
+		perror("공유 메모리 접근 실패.");
 		exit(1);
 	}
 
-	if (shmid3 == -1 || shmid4 == -1)
-	{
-		perror("shmget2");
-		exit(1);
-	}
-
-	// 공유메모리를 해당 프로세스에 부착
-	shmp = (int*)shmat(shmid, NULL, 0); // 플레이어 초기 값: shmp[0]: hp=10, shmp[1]: speed=5, shmp[2]: attack=3, shmp[3]: is_dead=0
-	shmp2 = (int*)shmat(shmid2, NULL, 0); // 상대 포켓몬 값: shmp[0]: hp=10, shmp[1]: speed=5, shmp[2]: attack=3, shmp[3]: is_dead=0
-	shmp3 = (int*)shmat(shmid3, NULL, 0); // 플레이어 초기 값: shmp[0]: hp=10, shmp[1]: speed=5, shmp[2]: attack=3, shmp[3]: is_dead=0
-	shmp4 = (int*)shmat(shmid4, NULL, 0); // 상대 포켓몬 값: shmp[0]: hp=10, shmp[1]: speed=5, shmp[2]: attack=3, shmp[3]: is_dead=0
+	shmp = (int*)shmat(shmid, NULL, 0); // 해당 프로세스에 플레이어 공유 메모리 부착
 
     // 공유메모리 주소를 통해 공유메모리에 값 넣기
 	shmp[0] = 10; // hp
