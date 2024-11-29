@@ -1,0 +1,116 @@
+﻿  소스의 유효성을 검사하는 중
+  소스를 '172.30.1.19'(으)로 원격으로 복사하는 중
+  아키텍처의 유효성을 검사하는 중
+  아키텍처의 유효성을 검사하는 중
+  원격 빌드를 시작하는 중
+  소스를 컴파일하는 중:
+  clientPlayer.c
+C:\Users\cijan\source\repos\Test\Project_PB_Server\clientPlayer.c(13,5): error : unknown type name ‘key_t’
+C:\Users\cijan\source\repos\Test\Project_PB_Server\clientPlayer.c(13,5): error :    13 |     key_t key_pokemon;
+C:\Users\cijan\source\repos\Test\Project_PB_Server\clientPlayer.c(13,5): error :       |     ^~~~~
+C:\Users\cijan\source\repos\Test\Project_PB_Server\clientPlayer.c(16,19): warning : implicit declaration of function ‘ftok’ [-Wimplicit-function-declaration]
+C:\Users\cijan\source\repos\Test\Project_PB_Server\clientPlayer.c(16,19): warning :    16 |     key_pokemon = ftok("/home/g_202111097/teamProject/포켓몬공유메모리", 1); // 포켓몬 공유메모리 키
+C:\Users\cijan\source\repos\Test\Project_PB_Server\clientPlayer.c(16,19): warning :       |                   ^~~~
+C:\Users\cijan\source\repos\Test\Project_PB_Server\clientPlayer.c(17,21): warning : implicit declaration of function ‘shmget’ [-Wimplicit-function-declaration]
+C:\Users\cijan\source\repos\Test\Project_PB_Server\clientPlayer.c(17,21): warning :    17 |     shmid_pokemon = shmget(key_pokemon, 1, IPC_CREAT | 0644);
+C:\Users\cijan\source\repos\Test\Project_PB_Server\clientPlayer.c(17,21): warning :       |                     ^~~~~~
+C:\Users\cijan\source\repos\Test\Project_PB_Server\clientPlayer.c(17,44): error : ‘IPC_CREAT’ undeclared (first use in this function); did you mean ‘O_CREAT’?
+C:\Users\cijan\source\repos\Test\Project_PB_Server\clientPlayer.c(17,44): error :    17 |     shmid_pokemon = shmget(key_pokemon, 1, IPC_CREAT | 0644);
+C:\Users\cijan\source\repos\Test\Project_PB_Server\clientPlayer.c(17,44): error :       |                                            ^~~~~~~~~
+C:\Users\cijan\source\repos\Test\Project_PB_Server\clientPlayer.c(17,44): error :       |                                            O_CREAT
+C:\Users\cijan\source\repos\Test\Project_PB_Server\clientPlayer.c(17,44): message : each undeclared identifier is reported only once for each function it appears in
+C:\Users\cijan\source\repos\Test\Project_PB_Server\clientPlayer.c(26,30): warning : implicit declaration of function ‘shmat’ [-Wimplicit-function-declaration]
+C:\Users\cijan\source\repos\Test\Project_PB_Server\clientPlayer.c(26,30): warning :    26 |     shmaddr_pokemon = (char*)shmat(shmid_pokemon, NULL, 0); // 포켓몬 공유메모리를 해당 프로세스에 부착
+C:\Users\cijan\source\repos\Test\Project_PB_Server\clientPlayer.c(26,30): warning :       |                              ^~~~~
+C:\Users\cijan\source\repos\Test\Project_PB_Server\clientPlayer.c(26,23): warning : cast to pointer from integer of different size [-Wint-to-pointer-cast]
+C:\Users\cijan\source\repos\Test\Project_PB_Server\clientPlayer.c(26,23): warning :    26 |     shmaddr_pokemon = (char*)shmat(shmid_pokemon, NULL, 0); // 포켓몬 공유메모리를 해당 프로세스에 부착
+C:\Users\cijan\source\repos\Test\Project_PB_Server\clientPlayer.c(26,23): warning :       |                       ^
+C:\Users\cijan\source\repos\Test\Project_PB_Server\clientPlayer.c(26,21): warning : assignment to ‘struct pokemon *’ from incompatible pointer type ‘char *’ [-Wincompatible-pointer-types]
+C:\Users\cijan\source\repos\Test\Project_PB_Server\clientPlayer.c(26,21): warning :    26 |     shmaddr_pokemon = (char*)shmat(shmid_pokemon, NULL, 0); // 포켓몬 공유메모리를 해당 프로세스에 부착
+C:\Users\cijan\source\repos\Test\Project_PB_Server\clientPlayer.c(26,21): warning :       |                     ^
+C:\Users\cijan\source\repos\Test\Project_PB_Server\clientPlayer.c(12,21): warning : variable ‘shmaddr_pokemon’ set but not used [-Wunused-but-set-variable]
+C:\Users\cijan\source\repos\Test\Project_PB_Server\clientPlayer.c(12,21): warning :    12 |     struct pokemon* shmaddr_pokemon;
+C:\Users\cijan\source\repos\Test\Project_PB_Server\clientPlayer.c(12,21): warning :       |                     ^~~~~~~~~~~~~~~
+  createEvent.c
+C:\Users\cijan\source\repos\Test\Project_PB_Server\createEvent.c(45,63): error : ‘struct price’ has no member named ‘exp’
+C:\Users\cijan\source\repos\Test\Project_PB_Server\createEvent.c(45,63): error :    45 |             if(scanf("%d %d %d %d %d %d", &rec.select_1.prices.exp, &rec.select_1.prices.HP, &rec.select_1.prices.AP,
+C:\Users\cijan\source\repos\Test\Project_PB_Server\createEvent.c(45,63): error :       |                                                               ^
+C:\Users\cijan\source\repos\Test\Project_PB_Server\createEvent.c(66,63): error : ‘struct price’ has no member named ‘exp’
+C:\Users\cijan\source\repos\Test\Project_PB_Server\createEvent.c(66,63): error :    66 |             if(scanf("%d %d %d %d %d %d", &rec.select_2.prices.exp, &rec.select_2.prices.HP, &rec.select_2.prices.AP,
+C:\Users\cijan\source\repos\Test\Project_PB_Server\createEvent.c(66,63): error :       |                                                               ^
+C:\Users\cijan\source\repos\Test\Project_PB_Server\createEvent.c(87,63): error : ‘struct price’ has no member named ‘exp’
+C:\Users\cijan\source\repos\Test\Project_PB_Server\createEvent.c(87,63): error :    87 |             if(scanf("%d %d %d %d %d %d", &rec.select_3.prices.exp, &rec.select_3.prices.HP, &rec.select_3.prices.AP,
+C:\Users\cijan\source\repos\Test\Project_PB_Server\createEvent.c(87,63): error :       |                                                               ^
+C:\Users\cijan\source\repos\Test\Project_PB_Server\createEvent.c(108,63): error : ‘struct price’ has no member named ‘exp’
+C:\Users\cijan\source\repos\Test\Project_PB_Server\createEvent.c(108,63): error :   108 |             if(scanf("%d %d %d %d %d %d", &rec.select_4.prices.exp, &rec.select_4.prices.HP, &rec.select_4.prices.AP,
+C:\Users\cijan\source\repos\Test\Project_PB_Server\createEvent.c(108,63): error :       |                                                               ^
+C:\Users\cijan\source\repos\Test\Project_PB_Server\createEvent.c(129,63): error : ‘struct price’ has no member named ‘exp’
+C:\Users\cijan\source\repos\Test\Project_PB_Server\createEvent.c(129,63): error :   129 |             if(scanf("%d %d %d %d %d %d", &rec.select_5.prices.exp, &rec.select_5.prices.HP, &rec.select_5.prices.AP,
+C:\Users\cijan\source\repos\Test\Project_PB_Server\createEvent.c(129,63): error :       |                                                               ^
+C:\Users\cijan\source\repos\Test\Project_PB_Server\createEvent.c(134,28): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\Users\cijan\source\repos\Test\Project_PB_Server\createEvent.c(134,28): warning :   134 |     fseek(fp, rec.event_id * sizeof(rec), SEEK_SET);
+C:\Users\cijan\source\repos\Test\Project_PB_Server\createEvent.c(134,28): warning :       |                            ^
+  pokemonTournament.c
+C:\Users\cijan\source\repos\Test\Project_PB_Server\pokemonTournament.c(119,9): warning : unused variable ‘status’ [-Wunused-variable]
+C:\Users\cijan\source\repos\Test\Project_PB_Server\pokemonTournament.c(119,9): warning :   119 |     int status;
+C:\Users\cijan\source\repos\Test\Project_PB_Server\pokemonTournament.c(119,9): warning :       |         ^~~~~~
+  serverPlayer.c
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(50,5): error : unknown type name ‘key_t’
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(50,5): error :    50 |     key_t key_player;
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(50,5): error :       |     ^~~~~
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(55,5): error : unknown type name ‘key_t’
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(55,5): error :    55 |     key_t key_pokemon;
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(55,5): error :       |     ^~~~~
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(62,18): warning : implicit declaration of function ‘ftok’ [-Wimplicit-function-declaration]
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(62,18): warning :    62 |     key_player = ftok("/home/g_202111097/teamProject/keyServerShm_1", 1); // 플레이어 공유메모리 키 (player[id][프로세스 아이디])
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(62,18): warning :       |                  ^~~~
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(63,20): warning : implicit declaration of function ‘shmget’ [-Wimplicit-function-declaration]
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(63,20): warning :    63 |     shmid_player = shmget(key_player, 1, IPC_CREAT | 0644);
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(63,20): warning :       |                    ^~~~~~
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(63,42): error : ‘IPC_CREAT’ undeclared (first use in this function); did you mean ‘O_CREAT’?
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(63,42): error :    63 |     shmid_player = shmget(key_player, 1, IPC_CREAT | 0644);
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(63,42): error :       |                                          ^~~~~~~~~
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(63,42): error :       |                                          O_CREAT
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(63,42): message : each undeclared identifier is reported only once for each function it appears in
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(72,29): warning : implicit declaration of function ‘shmat’ [-Wimplicit-function-declaration]
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(72,29): warning :    72 |     shmaddr_player = (char*)shmat(shmid_pokemon, NULL, 0); // 플레이어 공유메모리를 해당 프로세스에 부착
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(72,29): warning :       |                             ^~~~~
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(72,22): warning : cast to pointer from integer of different size [-Wint-to-pointer-cast]
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(72,22): warning :    72 |     shmaddr_player = (char*)shmat(shmid_pokemon, NULL, 0); // 플레이어 공유메모리를 해당 프로세스에 부착
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(72,22): warning :       |                      ^
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(72,20): warning : assignment to ‘struct player *’ from incompatible pointer type ‘char *’ [-Wincompatible-pointer-types]
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(72,20): warning :    72 |     shmaddr_player = (char*)shmat(shmid_pokemon, NULL, 0); // 플레이어 공유메모리를 해당 프로세스에 부착
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(72,20): warning :       |                    ^
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(85,23): warning : cast to pointer from integer of different size [-Wint-to-pointer-cast]
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(85,23): warning :    85 |     shmaddr_pokemon = (char*)shmat(shmid_player, NULL, 0); // 포켓몬 공유메모리를 해당 프로세스에 부착
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(85,23): warning :       |                       ^
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(85,21): warning : assignment to ‘struct pokemon *’ from incompatible pointer type ‘char *’ [-Wincompatible-pointer-types]
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(85,21): warning :    85 |     shmaddr_pokemon = (char*)shmat(shmid_player, NULL, 0); // 포켓몬 공유메모리를 해당 프로세스에 부착
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(85,21): warning :       |                     ^
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(60,9): warning : unused variable ‘accessCount’ [-Wunused-variable]
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(60,9): warning :    60 |     int accessCount = 0;
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(60,9): warning :       |         ^~~~~~~~~~~
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(58,9): warning : unused variable ‘player’ [-Wunused-variable]
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(58,9): warning :    58 |     int player[4][2];               //플레이어 아이디 + 프로세스 아이디
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(58,9): warning :       |         ^~~~~~
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(54,21): warning : variable ‘shmaddr_pokemon’ set but not used [-Wunused-but-set-variable]
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(54,21): warning :    54 |     struct pokemon* shmaddr_pokemon;
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(54,21): warning :       |                     ^~~~~~~~~~~~~~~
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(49,20): warning : variable ‘shmaddr_player’ set but not used [-Wunused-but-set-variable]
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(49,20): warning :    49 |     struct player* shmaddr_player;
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(49,20): warning :       |                    ^~~~~~~~~~~~~~
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(46,29): warning : unused variable ‘n’ [-Wunused-variable]
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(46,29): warning :    46 |     int fd1, fd2, fd3, fd4, n;
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(46,29): warning :       |                             ^
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(46,24): warning : variable ‘fd4’ set but not used [-Wunused-but-set-variable]
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(46,24): warning :    46 |     int fd1, fd2, fd3, fd4, n;
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(46,24): warning :       |                        ^~~
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(46,19): warning : variable ‘fd3’ set but not used [-Wunused-but-set-variable]
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(46,19): warning :    46 |     int fd1, fd2, fd3, fd4, n;
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(46,19): warning :       |                   ^~~
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(46,14): warning : variable ‘fd2’ set but not used [-Wunused-but-set-variable]
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(46,14): warning :    46 |     int fd1, fd2, fd3, fd4, n;
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(46,14): warning :       |              ^~~
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(46,9): warning : variable ‘fd1’ set but not used [-Wunused-but-set-variable]
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(46,9): warning :    46 |     int fd1, fd2, fd3, fd4, n;
+C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c(46,9): warning :       |         ^~~

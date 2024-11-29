@@ -3,32 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\cijan\\source\\repos\\Test\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F516DA96-E46C-4B9B-8846-F2507450BCB8}|Pokemon_Test\\Pokemon_Test.vcxproj|C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\RestBattleShm.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F516DA96-E46C-4B9B-8846-F2507450BCB8}|Pokemon_Test\\Pokemon_Test.vcxproj|solutionrelative:Pokemon_Test\\RestBattleShm.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{7205A42B-E80A-4292-B4AE-1C08DDD103D5}|Project_PB_Server\\Project_PB_Server.vcxproj|C:\\Users\\cijan\\source\\repos\\Test\\Project_PB_Server\\BattleManager.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7205A42B-E80A-4292-B4AE-1C08DDD103D5}|Project_PB_Server\\Project_PB_Server.vcxproj|solutionrelative:Project_PB_Server\\BattleManager.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F516DA96-E46C-4B9B-8846-F2507450BCB8}|Pokemon_Test\\Pokemon_Test.vcxproj|C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\PrintShm.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F516DA96-E46C-4B9B-8846-F2507450BCB8}|Pokemon_Test\\Pokemon_Test.vcxproj|solutionrelative:Pokemon_Test\\PrintShm.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{7205A42B-E80A-4292-B4AE-1C08DDD103D5}|Project_PB_Server\\Project_PB_Server.vcxproj|C:\\Users\\cijan\\source\\repos\\Test\\Project_PB_Server\\RestBattleShm.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7205A42B-E80A-4292-B4AE-1C08DDD103D5}|Project_PB_Server\\Project_PB_Server.vcxproj|solutionrelative:Project_PB_Server\\RestBattleShm.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F516DA96-E46C-4B9B-8846-F2507450BCB8}|Pokemon_Test\\Pokemon_Test.vcxproj|C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\Battle_Client_UI.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F516DA96-E46C-4B9B-8846-F2507450BCB8}|Pokemon_Test\\Pokemon_Test.vcxproj|solutionrelative:Pokemon_Test\\Battle_Client_UI.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{7205A42B-E80A-4292-B4AE-1C08DDD103D5}|Project_PB_Server\\Project_PB_Server.vcxproj|C:\\Users\\cijan\\source\\repos\\Test\\Project_PB_Server\\Battle_Client_UI.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7205A42B-E80A-4292-B4AE-1C08DDD103D5}|Project_PB_Server\\Project_PB_Server.vcxproj|solutionrelative:Project_PB_Server\\Battle_Client_UI.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F516DA96-E46C-4B9B-8846-F2507450BCB8}|Pokemon_Test\\Pokemon_Test.vcxproj|C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\BattleManager.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F516DA96-E46C-4B9B-8846-F2507450BCB8}|Pokemon_Test\\Pokemon_Test.vcxproj|solutionrelative:Pokemon_Test\\BattleManager.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{7205A42B-E80A-4292-B4AE-1C08DDD103D5}|Project_PB_Server\\Project_PB_Server.vcxproj|C:\\Users\\cijan\\source\\repos\\Test\\Project_PB_Server\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7205A42B-E80A-4292-B4AE-1C08DDD103D5}|Project_PB_Server\\Project_PB_Server.vcxproj|solutionrelative:Project_PB_Server\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F516DA96-E46C-4B9B-8846-F2507450BCB8}|Pokemon_Test\\Pokemon_Test.vcxproj|C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F516DA96-E46C-4B9B-8846-F2507450BCB8}|Pokemon_Test\\Pokemon_Test.vcxproj|solutionrelative:Pokemon_Test\\player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{7205A42B-E80A-4292-B4AE-1C08DDD103D5}|Project_PB_Server\\Project_PB_Server.vcxproj|C:\\Users\\cijan\\source\\repos\\Test\\Project_PB_Server\\pokemonTournament.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7205A42B-E80A-4292-B4AE-1C08DDD103D5}|Project_PB_Server\\Project_PB_Server.vcxproj|solutionrelative:Project_PB_Server\\pokemonTournament.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F516DA96-E46C-4B9B-8846-F2507450BCB8}|Pokemon_Test\\Pokemon_Test.vcxproj|C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F516DA96-E46C-4B9B-8846-F2507450BCB8}|Pokemon_Test\\Pokemon_Test.vcxproj|solutionrelative:Pokemon_Test\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{7205A42B-E80A-4292-B4AE-1C08DDD103D5}|Project_PB_Server\\Project_PB_Server.vcxproj|C:\\Users\\cijan\\source\\repos\\Test\\Project_PB_Server\\PrintShm.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7205A42B-E80A-4292-B4AE-1C08DDD103D5}|Project_PB_Server\\Project_PB_Server.vcxproj|solutionrelative:Project_PB_Server\\PrintShm.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F516DA96-E46C-4B9B-8846-F2507450BCB8}|Pokemon_Test\\Pokemon_Test.vcxproj|C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\pokemonTournament.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F516DA96-E46C-4B9B-8846-F2507450BCB8}|Pokemon_Test\\Pokemon_Test.vcxproj|solutionrelative:Pokemon_Test\\pokemonTournament.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{7205A42B-E80A-4292-B4AE-1C08DDD103D5}|Project_PB_Server\\Project_PB_Server.vcxproj|C:\\Users\\cijan\\source\\repos\\Test\\Project_PB_Server\\player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7205A42B-E80A-4292-B4AE-1C08DDD103D5}|Project_PB_Server\\Project_PB_Server.vcxproj|solutionrelative:Project_PB_Server\\player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -41,98 +41,98 @@
           "SelectedChildIndex": 4,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "pokemonTournament.c",
-              "DocumentMoniker": "C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\pokemonTournament.c",
-              "RelativeDocumentMoniker": "Pokemon_Test\\pokemonTournament.c",
-              "ToolTip": "C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\pokemonTournament.c",
-              "RelativeToolTip": "Pokemon_Test\\pokemonTournament.c",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAcwHoAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-11-29T16:20:20.508Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "main.c",
-              "DocumentMoniker": "C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\main.c",
-              "RelativeDocumentMoniker": "Pokemon_Test\\main.c",
-              "ToolTip": "C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\main.c",
-              "RelativeToolTip": "Pokemon_Test\\main.c",
-              "ViewState": "AgIAAIEAAAAAAAAAAAAAAKEAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-11-29T16:20:14.417Z",
+              "DocumentIndex": 6,
+              "Title": "player.h",
+              "DocumentMoniker": "C:\\Users\\cijan\\source\\repos\\Test\\Project_PB_Server\\player.h",
+              "RelativeDocumentMoniker": "Project_PB_Server\\player.h",
+              "ToolTip": "C:\\Users\\cijan\\source\\repos\\Test\\Project_PB_Server\\player.h",
+              "RelativeToolTip": "Project_PB_Server\\player.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-29T17:16:30.153Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "player.h",
-              "DocumentMoniker": "C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\player.h",
-              "RelativeDocumentMoniker": "Pokemon_Test\\player.h",
-              "ToolTip": "C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\player.h",
-              "RelativeToolTip": "Pokemon_Test\\player.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-28T18:26:41.889Z",
+              "Title": "pokemonTournament.c",
+              "DocumentMoniker": "C:\\Users\\cijan\\source\\repos\\Test\\Project_PB_Server\\pokemonTournament.c",
+              "RelativeDocumentMoniker": "Project_PB_Server\\pokemonTournament.c",
+              "ToolTip": "C:\\Users\\cijan\\source\\repos\\Test\\Project_PB_Server\\pokemonTournament.c",
+              "RelativeToolTip": "Project_PB_Server\\pokemonTournament.c",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAADAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-11-29T17:16:32.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "main.c",
+              "DocumentMoniker": "C:\\Users\\cijan\\source\\repos\\Test\\Project_PB_Server\\main.c",
+              "RelativeDocumentMoniker": "Project_PB_Server\\main.c",
+              "ToolTip": "C:\\Users\\cijan\\source\\repos\\Test\\Project_PB_Server\\main.c",
+              "RelativeToolTip": "Project_PB_Server\\main.c",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAAAAsAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-11-29T17:16:28.999Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RestBattleShm.c",
-              "DocumentMoniker": "C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\RestBattleShm.c",
-              "RelativeDocumentMoniker": "Pokemon_Test\\RestBattleShm.c",
-              "ToolTip": "C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\RestBattleShm.c",
-              "RelativeToolTip": "Pokemon_Test\\RestBattleShm.c",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAwB4AAAACAAAAAAAAAA==",
+              "Title": "BattleManager.c",
+              "DocumentMoniker": "C:\\Users\\cijan\\source\\repos\\Test\\Project_PB_Server\\BattleManager.c",
+              "RelativeDocumentMoniker": "Project_PB_Server\\BattleManager.c",
+              "ToolTip": "C:\\Users\\cijan\\source\\repos\\Test\\Project_PB_Server\\BattleManager.c",
+              "RelativeToolTip": "Project_PB_Server\\BattleManager.c",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAACoAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-11-28T19:46:35.545Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PrintShm.c",
-              "DocumentMoniker": "C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\PrintShm.c",
-              "RelativeDocumentMoniker": "Pokemon_Test\\PrintShm.c",
-              "ToolTip": "C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\PrintShm.c",
-              "RelativeToolTip": "Pokemon_Test\\PrintShm.c",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAMwDEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-11-29T16:17:22.248Z",
+              "WhenOpened": "2024-11-29T17:16:02.686Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Battle_Client_UI.c",
-              "DocumentMoniker": "C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\Battle_Client_UI.c",
-              "RelativeDocumentMoniker": "Pokemon_Test\\Battle_Client_UI.c",
-              "ToolTip": "C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\Battle_Client_UI.c",
-              "RelativeToolTip": "Pokemon_Test\\Battle_Client_UI.c",
-              "ViewState": "AgIAAJwAAAAAAAAAAAAAAJcAAAAPAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\cijan\\source\\repos\\Test\\Project_PB_Server\\Battle_Client_UI.c",
+              "RelativeDocumentMoniker": "Project_PB_Server\\Battle_Client_UI.c",
+              "ToolTip": "C:\\Users\\cijan\\source\\repos\\Test\\Project_PB_Server\\Battle_Client_UI.c",
+              "RelativeToolTip": "Project_PB_Server\\Battle_Client_UI.c",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAAAKUAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-11-26T18:16:44.338Z",
+              "WhenOpened": "2024-11-29T17:16:01.804Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BattleManager.c",
-              "DocumentMoniker": "C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\BattleManager.c",
-              "RelativeDocumentMoniker": "Pokemon_Test\\BattleManager.c",
-              "ToolTip": "C:\\Users\\cijan\\source\\repos\\Test\\Pokemon_Test\\BattleManager.c",
-              "RelativeToolTip": "Pokemon_Test\\BattleManager.c",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAACcAAAAcAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "RestBattleShm.c",
+              "DocumentMoniker": "C:\\Users\\cijan\\source\\repos\\Test\\Project_PB_Server\\RestBattleShm.c",
+              "RelativeDocumentMoniker": "Project_PB_Server\\RestBattleShm.c",
+              "ToolTip": "C:\\Users\\cijan\\source\\repos\\Test\\Project_PB_Server\\RestBattleShm.c",
+              "RelativeToolTip": "Project_PB_Server\\RestBattleShm.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-11-26T18:15:53.244Z",
+              "WhenOpened": "2024-11-29T17:25:40.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PrintShm.c",
+              "DocumentMoniker": "C:\\Users\\cijan\\source\\repos\\Test\\Project_PB_Server\\PrintShm.c",
+              "RelativeDocumentMoniker": "Project_PB_Server\\PrintShm.c",
+              "ToolTip": "C:\\Users\\cijan\\source\\repos\\Test\\Project_PB_Server\\PrintShm.c",
+              "RelativeToolTip": "Project_PB_Server\\PrintShm.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-11-29T17:25:42.47Z",
               "EditorCaption": ""
             }
           ]

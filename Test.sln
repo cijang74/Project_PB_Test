@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35514.174 d17.12
+VisualStudioVersion = 17.12.35514.174
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Fork_Test", "Test\Test.vcxproj", "{DB747532-8C09-4AA7-BC06-1DA2711E669E}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Pipe_Test", "Pipe_Test\Pipe_Test.vcxproj", "{68B3A7C5-8157-4275-B857-79C678DE0681}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Pokemon_Test", "Pokemon_Test\Pokemon_Test.vcxproj", "{F516DA96-E46C-4B9B-8846-F2507450BCB8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project_PB_Server", "Project_PB_Server\Project_PB_Server.vcxproj", "{7205A42B-E80A-4292-B4AE-1C08DDD103D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -119,6 +121,30 @@ Global
 		{F516DA96-E46C-4B9B-8846-F2507450BCB8}.Release|x86.ActiveCfg = Release|x86
 		{F516DA96-E46C-4B9B-8846-F2507450BCB8}.Release|x86.Build.0 = Release|x86
 		{F516DA96-E46C-4B9B-8846-F2507450BCB8}.Release|x86.Deploy.0 = Release|x86
+		{7205A42B-E80A-4292-B4AE-1C08DDD103D5}.Debug|ARM.ActiveCfg = Debug|ARM
+		{7205A42B-E80A-4292-B4AE-1C08DDD103D5}.Debug|ARM.Build.0 = Debug|ARM
+		{7205A42B-E80A-4292-B4AE-1C08DDD103D5}.Debug|ARM.Deploy.0 = Debug|ARM
+		{7205A42B-E80A-4292-B4AE-1C08DDD103D5}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{7205A42B-E80A-4292-B4AE-1C08DDD103D5}.Debug|ARM64.Build.0 = Debug|ARM64
+		{7205A42B-E80A-4292-B4AE-1C08DDD103D5}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{7205A42B-E80A-4292-B4AE-1C08DDD103D5}.Debug|x64.ActiveCfg = Debug|x64
+		{7205A42B-E80A-4292-B4AE-1C08DDD103D5}.Debug|x64.Build.0 = Debug|x64
+		{7205A42B-E80A-4292-B4AE-1C08DDD103D5}.Debug|x64.Deploy.0 = Debug|x64
+		{7205A42B-E80A-4292-B4AE-1C08DDD103D5}.Debug|x86.ActiveCfg = Debug|x86
+		{7205A42B-E80A-4292-B4AE-1C08DDD103D5}.Debug|x86.Build.0 = Debug|x86
+		{7205A42B-E80A-4292-B4AE-1C08DDD103D5}.Debug|x86.Deploy.0 = Debug|x86
+		{7205A42B-E80A-4292-B4AE-1C08DDD103D5}.Release|ARM.ActiveCfg = Release|ARM
+		{7205A42B-E80A-4292-B4AE-1C08DDD103D5}.Release|ARM.Build.0 = Release|ARM
+		{7205A42B-E80A-4292-B4AE-1C08DDD103D5}.Release|ARM.Deploy.0 = Release|ARM
+		{7205A42B-E80A-4292-B4AE-1C08DDD103D5}.Release|ARM64.ActiveCfg = Release|ARM64
+		{7205A42B-E80A-4292-B4AE-1C08DDD103D5}.Release|ARM64.Build.0 = Release|ARM64
+		{7205A42B-E80A-4292-B4AE-1C08DDD103D5}.Release|ARM64.Deploy.0 = Release|ARM64
+		{7205A42B-E80A-4292-B4AE-1C08DDD103D5}.Release|x64.ActiveCfg = Release|x64
+		{7205A42B-E80A-4292-B4AE-1C08DDD103D5}.Release|x64.Build.0 = Release|x64
+		{7205A42B-E80A-4292-B4AE-1C08DDD103D5}.Release|x64.Deploy.0 = Release|x64
+		{7205A42B-E80A-4292-B4AE-1C08DDD103D5}.Release|x86.ActiveCfg = Release|x86
+		{7205A42B-E80A-4292-B4AE-1C08DDD103D5}.Release|x86.Build.0 = Release|x86
+		{7205A42B-E80A-4292-B4AE-1C08DDD103D5}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
