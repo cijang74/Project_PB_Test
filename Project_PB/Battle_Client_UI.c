@@ -99,11 +99,16 @@ void player_turn_attack(struct player* shmp, int processID, int opponentID)
 		printf("[Battle Manager]: 상대 포켓몬의 체력은 %d로 줄어들었다.\n", shmp[opponentID].selectedMonster.stats.HP);
 	}
 
+	// 공격 후에는 상대 플레이어의 공격 함수 차례
+	shmp[processID].isMyTurn = 0;
+	shmp[opponentID].isMyTurn = 1;
+
 	// 해당 공격으로 상대 플레이어의 체력이 0이 되는지 체크
 	if (shmp[opponentID].selectedMonster.stats.HP <= 0)
 	{
 		shmp[opponentID].is_dead = 1; // isdead = 1;
 		shmp[processID].is_battle_end = 1; // is_battle_End = 1;
+		shmp[opponentID].is_battle_end = 1; // is_battle_End = 1;
 		shmp[opponentID].is_wined = 1; // is_battle_End = 1;
 
 		printf("[Battle Manager]: 당신은 승리하였습니다. 메인 화면으로 돌아갑니까?\n");
@@ -116,9 +121,6 @@ void player_turn_attack(struct player* shmp, int processID, int opponentID)
 		return;
 	}
 
-	// 공격 후에는 상대 플레이어의 공격 함수 차례
-	shmp[processID].isMyTurn = 0;
-	shmp[opponentID].isMyTurn = 1;
 	printf("\n[Battle Manager]: || 상대 턴! ||\n");
 
 	waiting_opponent(shmp, processID, opponentID);
@@ -146,6 +148,7 @@ void waiting_opponent(struct player* shmp, int processID, int opponentID)
 		if (shmp[processID].selectedMonster.stats.HP <= 0)
 		{
 			shmp[processID].is_dead = 1; // isdead = 1;
+			shmp[processID].is_battle_end = 1; // is_battle_End = 1;
 			shmp[opponentID].is_battle_end = 1; // is_battle_End = 1;
 			shmp[opponentID].is_wined = 1; // is_battle_End = 1;
 
@@ -171,7 +174,7 @@ void Devide_Team(int processID) // process_ID를 전달받음 0,1,2,3
 	struct player* shmp; // p1 공유 메모리 저장 공간
 
 	// 키값(키 정보) 설정
-	key = ftok("main", 10597);
+	key = ftok("main", 1);
 
 	//공유 메모리 접근
 	shmid = shmget(key, sizeof(struct player) * 4, 0); // 플레이어
@@ -206,13 +209,13 @@ void Devide_Team(int processID) // process_ID를 전달받음 0,1,2,3
 		if (processID + 1 == 1)
 		{
 			// p1 vs p2
-			opponentID = 2;
+			opponentID = 1;
 		}
 
 		if (processID + 1 == 2)
 		{
 			// p2 vs p1
-			opponentID = 1;
+			opponentID = 0;
 		}
 
 		if (processID + 1 == 3)
@@ -224,8 +227,9 @@ void Devide_Team(int processID) // process_ID를 전달받음 0,1,2,3
 		if (processID + 1 == 4)
 		{
 			// p4 vs p3
-			opponentID = 4;
+			opponentID = 2;
 		}
+		printf("\n 내 프로세스ID는 %d 상대 프로세스 ID는 %d", processID, opponentID);
 	}
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

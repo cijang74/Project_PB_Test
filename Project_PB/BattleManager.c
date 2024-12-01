@@ -37,7 +37,7 @@ int main(int argc, char*argv[]) // 플레이어 ID 넘겨 받을것.
 	key_t key;
 
 	// 키값(키 정보) 설정
-	key = ftok("main", 10597); 
+	key = ftok("main", 1); 
 
 	//공유 메모리 접근
 	shmid = shmget(key, sizeof(struct player) * 4, 0); // 플레이어
@@ -152,13 +152,15 @@ void Check_Winner(int playerID, int processID, struct player* shmp)
 
 	for (int i = 0; i < 4; i++)
 	{
-		if (shmp[processID].is_dead != 1 && shmp[processID].is_wined == 1) //shmp[3]: is_dead
+		if (shmp[i].is_dead != 1 && shmp[i].is_wined == 1) //죽지 않았고 1차 대전에서 통과한사람 몇명?
 		{
 			count++;
 		}
 	}
 
-	if (count == 1)
+	printf("\ncount: %d", count);
+
+	if (count == 2)
 	{
 		printf("\n당신은 첫 경기에서 승리하였다. (메인 프로그램으로)\n");
 		shmdt(shmp);
@@ -166,7 +168,7 @@ void Check_Winner(int playerID, int processID, struct player* shmp)
 		execl("./main", "main", playerID, NULL); // 메인프로그램으로 다시 이동
 	}
 
-	if (count == 2)
+	if (count == 1)
 	{
 		printf("\n당신은 최종 경기에서 승리하였다. (승리 이벤트씬으로)\n");
 		shmdt(shmp);
@@ -221,6 +223,7 @@ void waitingPlayer_All_BattleEnd(struct player* shmp)
 			flag4 = 1;
 		}
 		
+		printf("p1: %d, p2: %d, p3: %d, p4: %d", flag1, flag2, flag3, flag4);
 		sleep(1);
 	}
 

@@ -21,7 +21,7 @@ int main()
 	struct player* shmp; // p1 공유 메모리 저장 공간
 
 	// 키값(키 정보) 설정
-	key = ftok("main", 1);
+	key = ftok("main", 10597);
 
 	//공유 메모리 접근
 	shmid = shmget(key, sizeof(struct player) * 4, 0); // 플레이어

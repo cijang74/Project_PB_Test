@@ -1,6 +1,6 @@
 C:\Users\cijan\source\repos\Test\Project_PB_Server\aaa.c|638685293544579369|~/projects/Project_PB_Server/|
-C:\Users\cijan\source\repos\Test\Project_PB_Server\BattleManager.c|638685303208148576|~/projects/Project_PB_Server/|
-C:\Users\cijan\source\repos\Test\Project_PB_Server\Battle_Client_UI.c|638685303850251913|~/projects/Project_PB_Server/|
+C:\Users\cijan\source\repos\Test\Project_PB_Server\BattleManager.c|638686055298595458|~/projects/Project_PB_Server/|
+C:\Users\cijan\source\repos\Test\Project_PB_Server\Battle_Client_UI.c|638686051042307392|~/projects/Project_PB_Server/|
 C:\Users\cijan\source\repos\Test\Project_PB_Server\checkMonster.c|638685293546175217|~/projects/Project_PB_Server/|
 C:\Users\cijan\source\repos\Test\Project_PB_Server\checkMyMonsterScene.c|638685293546726172|~/projects/Project_PB_Server/|
 C:\Users\cijan\source\repos\Test\Project_PB_Server\checkSkill.c|638685293547525700|~/projects/Project_PB_Server/|
@@ -13,10 +13,11 @@ C:\Users\cijan\source\repos\Test\Project_PB_Server\eventTxtToBinary.c|6386852935
 C:\Users\cijan\source\repos\Test\Project_PB_Server\growScene.c|638685293558122385|~/projects/Project_PB_Server/|
 C:\Users\cijan\source\repos\Test\Project_PB_Server\main.c|638685283943987971|~/projects/Project_PB_Server/|
 C:\Users\cijan\source\repos\Test\Project_PB_Server\pokemonTournament.c|638685305058664168|~/projects/Project_PB_Server/|
-C:\Users\cijan\source\repos\Test\Project_PB_Server\PrintShm.c|638685303456481303|~/projects/Project_PB_Server/|
-C:\Users\cijan\source\repos\Test\Project_PB_Server\RestBattleShm.c|638685303496771628|~/projects/Project_PB_Server/|
+C:\Users\cijan\source\repos\Test\Project_PB_Server\PrintShm.c|638685266127261942|~/projects/Project_PB_Server/|
+C:\Users\cijan\source\repos\Test\Project_PB_Server\RestBattleShm.c|638686037181942533|~/projects/Project_PB_Server/|
 C:\Users\cijan\source\repos\Test\Project_PB_Server\server.c|638685293564893313|~/projects/Project_PB_Server/|
 C:\Users\cijan\source\repos\Test\Project_PB_Server\serverPlayer.c|638685293565681535|~/projects/Project_PB_Server/|
+C:\Users\cijan\source\repos\Test\Project_PB_Server\SetUpShm.c|638686016320789586|~/projects/Project_PB_Server/|
 C:\Users\cijan\source\repos\Test\Project_PB_Server\updateMonster.c|638685293569040513|~/projects/Project_PB_Server/|
 C:\Users\cijan\source\repos\Test\Project_PB_Server\updateSkill.c|638685293571851389|~/projects/Project_PB_Server/|
 C:\Users\cijan\source\repos\Test\Project_PB_Server\event.h|638685293554693929|~/projects/Project_PB_Server/|
